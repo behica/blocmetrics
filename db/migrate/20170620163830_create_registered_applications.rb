@@ -4,7 +4,7 @@ class CreateRegisteredApplications < ActiveRecord::Migration[5.0]
       t.string :name
       t.text :url
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end
