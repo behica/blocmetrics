@@ -4,25 +4,22 @@
 <h3>Events</h3>
 <div class="container">
   <div class="row">
-    <div class="col-md-4">
       <%= pie_chart @app.events.group(:eventname).count %>  
-    </div>
-    <div class="col-md-4">
+  <div class="row">
       <%= line_chart @app.events.group_by_day(:created_at).count %>
-    </div>
-    <div class="col-md-4">
-      <table class="table">
-        <tr class="row"> 
-          <th>Name</th>
-          <th>Count</th>
-        </tr>
-        <% @events.each do |event, count| %>
-        <tr class="row">
-            <td><%= event %></td>
-            <td><%= count.length %></td>
-        </tr>
-        <% end %>
-      </table>
-    </div>
+  </div>
+  <div class="row">
+    <table class="table">
+      <tr class="row"> 
+        <th>Name</th>
+        <th>Count</th>
+      </tr>
+      <% @events.each do |event, count| %>
+      <tr class="row">
+          <td><%= event %></td>
+          <td><%= count.length %></td>
+      </tr>
+      <% end %>
+    </table>
   </div>
 </div>
