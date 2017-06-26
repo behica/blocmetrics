@@ -11,7 +11,7 @@ user.save!
 10.times do
   RegisteredApplication.create!(
     name: Faker::App.name,
-    url:  Faker::Internet.url,
+    url:  Faker::Internet.domain_name,
     user: User.first
   )
 end
@@ -20,6 +20,7 @@ apps = RegisteredApplication.all
 100.times do
   Event.create!(
     eventname:              Faker::Hacker.verb,
+    created_at:             Faker::Date.backward(14),
     registered_application: apps.sample
   )
 end

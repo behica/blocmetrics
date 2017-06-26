@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
@@ -27,6 +27,8 @@ gem 'bootstrap-sass'
 gem 'figaro'
 gem 'devise'
 gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
+gem 'chartkick'
+gem 'groupdate'
 
 
 group :development, :test do
