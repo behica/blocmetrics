@@ -20,7 +20,7 @@ blocmetrics = {};
 blocmetrics.report = function(eventName){
   var event = {event: { eventname: eventName }};
   var request = new XMLHttpRequest();
-  request.open("POST", "http://localhost:8080/api/events", true);
+  request.open("POST", "https://b-metrics.herokuapp.com/api/events", true);
   request.setRequestHeader('Content-Type', 'application/json');
   request.send(JSON.stringify(event));
 };
